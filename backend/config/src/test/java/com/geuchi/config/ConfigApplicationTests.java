@@ -1,10 +1,10 @@
-package com.geuchi.userservice;
+package com.geuchi.config;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class UserServiceApplicationTests {
+class ConfigApplicationTests {
 
     @Test
     void contextLoads() {
