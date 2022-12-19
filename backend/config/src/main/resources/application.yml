@@ -1,0 +1,21 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-service
+  profiles:
+    active: native, default #native file repository
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: ${search.location:file:///${user.home}/github/project/project-geuchi/config} #Window
+#          search-locations: file://${user.home}/Develop/github/project/project-geuchi/config #Mac
+
+#config server actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: busrefresh

@@ -1,0 +1,26 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-service
+  profiles:
+    active: native, default #native file repository
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/heechul90/project-geuchi-config-repo.git
+          username: '{cipher}ba3...'
+          password: '{cipher}26a...'
+          search-paths: config #repository 폴더 경로
+          default-label: main  #main branch
+          ignore-local-ssh-settings: true
+          skip-ssl-validation: true
+
+#config server actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: busrefresh
