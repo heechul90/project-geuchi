@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'com.geuchi'
-version = '0.0.1-SNAPSHOT'
+version = '1.0.0'
 sourceCompatibility = '17'
 
 configurations {
@@ -20,11 +20,21 @@ repositories {
     maven { url 'https://repo.spring.io/milestone' }
 }
 
+bootJar {
+    enabled = false
+}
+
+jar {
+    enabled = true
+}
+
 ext {
     set('springCloudVersion', "2022.0.0-RC2")
 }
 
 dependencies {
+    //compile project(':geuchi-common')
+
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-cache'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
