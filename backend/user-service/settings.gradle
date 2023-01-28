@@ -1,5 +1,1 @@
 rootProject.name = 'user-service'
-
-/*
-include ':geuchi-common'
-project(':geuchi-common').projectDir = new File(settingsDir, '../geuchi-common')*/
